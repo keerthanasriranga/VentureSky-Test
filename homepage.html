@@ -11,7 +11,13 @@
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  
+  <link rel="stylesheet" href="slider/dist/styles/jquery.carousel-3d.default.css" />
+
+<script src="slider/bower_components/jquery/jquery.js"></script>
+<script src="slider/bower_components/javascript-detect-element-resize/jquery.resize.js"></script>
+<script src="slider/bower_components/waitForImages/dist/jquery.waitforimages.js"></script>
+<script src="slider/bower_components/modernizr/modernizr.js"></script>
+<script src="slider/dist/jquery.carousel-3d.js" ></script>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 
@@ -80,22 +86,20 @@
   </div>
 </div>
 
-<div class="container-fluid bg-grey">
-  <div class="row">
-  <div class="col-sm-1">
-  <!--insert image-->
-  </div>
-    <div class="col-sm-3">
-      <span class="glyphicon glyphicon-globe logo slideanim"></span>
+<!--<div class="container-fluid bg-grey">
+  <div class="row">-->
+  <div id="wrapper">
+    <div id="myCarousel" data-carousel-3d>
+        <img src="pic1.jpeg" />
+        <img src="p2.jpeg" selected />
+        <img src="p3.jpeg" />
+        <img src="p5.jpeg" />
+        <img src="p6.jpeg" />
     </div>
-    <div class="col-sm-8">
-      <h2>Our Values</h2><br>
-      <h4><strong>MISSION:</strong> Our mission lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4><br>
-      <p><strong>VISION:</strong> Our vision Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
-  </div>
 </div>
+```
+ <!-- </div>
+</div>-->
 
 <!-- Container (Services Section) -->
 <div id="services" class="container-fluid text-center">
@@ -367,6 +371,12 @@ $(document).ready(function(){
     });
   });
 })
+$('#myCarousel').Carousel3d('prev');
+$('#myCarousel').Carousel3d('next');
+$('#myCarousel').Carousel3d('rotate', 3);
+$('#myCarousel').on('select', function (evt, index) {
+    console.log('item selected : ' + index);
+});
 </script>
 
 </body>
