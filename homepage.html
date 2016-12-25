@@ -9,12 +9,13 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="style.css" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   
 </head>
-<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 <nav class="navbar navbar-default navbar-fixed-top" >
   <div class="container">
     <div class="navbar-header">
@@ -30,27 +31,28 @@
         <li><a href="#home">Home</a></li>
         <li><a href="#features">Features</a></li>
         <li><a href="#reviews">Reviews</a></li>
-        <li><a href="#pricing">Download</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#download">Download</a></li>
+    
       </ul>
     </div>
   </div>
 </nav>
 
 <div class="jumbotron" id="home">
-<div class="row" style="margin-left: 55px">
-    <div class="col-sm-6">
+<div class="row">
+    <div class="col-xs-7 col-md-6 col-md-offset-1">
   <h1>Get the most fun weather app</h1> 
-  <p>Simple,nice and user-friendly application of the weather.Only useful information</p>
+  <p id="heading">Simple,nice and user-friendly application of the weather.Only useful information.</p>
   <div class="input-group-btn">
         <button type="button" class="btn btn-danger">Download</button>
         <button type="button" class="btn btn-primary" style="margin-left: 20px" >Features</button>
       </div>
   </div>
-    <div class="col-sm-4 col-sm-offset-1">
-              <img src="images/mobilescreen.jpg" height="400" width="200">
+    <div  class="col-xs-3 col-md-offset-1 col-md-2" >
+              <img src="images/mobilescreen.jpg" height="300" width="150"  border="0" class="responsive-image" alt="Null" style="margin-top: 20px">
         </div>
     </div> 
+
  </div>
 
 <!-- Container (About Section) -->
@@ -61,7 +63,7 @@
   <!--insert image-->
   </div>
     <div class="col-sm-3">
-      <h4>Usability</h4><br>
+      <h4 >Usability</h4><br>
       <p>Sometimes the simplest of things are the hardest to find.So we created a new line for everyday life.</p>
   </div>
   <div class="col-sm-1">
@@ -185,22 +187,44 @@ Sometimes the simplest of things are the hardest to find.So we created a new lin
 </div>
 </div>
 </div>
-
-
 </div>
 
 
 
 
-<!-- Add Google Maps -->
+<div class="row" style="background-color: #6666ff;height: 300px;position: relative"  id="download">
+<div class="col-sm-4  col-sm-offset-1" style="margin-top: 30px">
+<h3 style="color: white;padding-bottom: 15px">HOW TO DOWNLOAD THE APP?</h3>
+<p style="color: white">Just download the app from the store.Simple,nice and user friendly application of the weather. Only relevant and useful information.</p>
+<a href="#mypage"><img src="images/appstore.png"></a>
+<a href="#mypage"><img src="images/playstore.png"></a>
+</div>
+<div class="col-sm-4 col-sm-offset-2">
+<img src="images/footerim.jpg" style="height: 270px;width: 270px;margin-top: 30px">
+</div>
+</div>
+
+<!--footer-->
+
+<div class="row slideanim" style="background-color: black;height: 100px">
+<div class="col-sm-12">
+<div class="col-sm-4 col-sm-offset-1">
+<b><span style="color: red">FUN</span> <span style="color: #6666ff">WEATHER</span></b>
+</div>
+<div class="col-sm-1">Home</div>
+<div class="col-sm-1 col-sm-offset-0.5">Features</div>
+<div class="col-sm-1 col-sm-offset-0.5">Reviews</div>
+<div class="col-sm-1 col-sm-offset-0.5">Download</div>
+<div class="col-sm-1.5 col-sm-offset-1">
+<a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook"></i></a>
+<a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i class="fa fa-linkedin"></i></a>
+<a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
+</div>
 
 
-<footer class="container-fluid text-center">
-  <a href="#myPage" title="To Top">
-    <span class="glyphicon glyphicon-chevron-up"></span>
-  </a>
-  
-</footer>
+</div>
+</div>
+
 
 <script>
 $(document).ready(function(){
@@ -228,7 +252,7 @@ $(document).ready(function(){
     $(".slideanim").each(function(){
       var pos = $(this).offset().top;
       var winTop = $(window).scrollTop();
-        if (pos < winTop + 600) {
+        if (pos < winTop + 900) {
           $(this).addClass("slide");
         }
     });
@@ -236,7 +260,6 @@ $(document).ready(function(){
 })
 var slideIndex = 0;
 showSlides();
-
 function showSlides() {
     var i;
     var slides = document.getElementsByClassName("mySlides");

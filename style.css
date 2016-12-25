@@ -2,6 +2,8 @@ body {
       font: 400 15px Lato, sans-serif;
       line-height: 1.8;
       color: #818181;
+
+
   }
   h2 {
       font-size: 24px;
@@ -23,7 +25,7 @@ body {
       color: #fff;
       padding: 100px 25px;
       font-family: Montserrat, sans-serif;
-      height: 550px;
+      min-height: 350px;
   }
   .container-fluid {
       padding: 60px 50px;
@@ -53,44 +55,7 @@ body {
   .item span {
       font-style: normal;
   }
-  .panel {
-      border: 1px solid #6666ff; 
-      border-radius:0 !important;
-      transition: box-shadow 0.5s;
-  }
-  .panel:hover {
-      box-shadow: 5px 0px 40px rgba(0,0,0, .2);
-  }
-  .panel-footer .btn:hover {
-      border: 1px solid #6666ff;
-      background-color: #fff !important;
-      color: #6666ff;
-  }
-  .panel-heading {
-      color: #fff !important;
-      background-color: #6666ff !important;
-      padding: 25px;
-      border-bottom: 1px solid transparent;
-      border-top-left-radius: 0px;
-      border-top-right-radius: 0px;
-      border-bottom-left-radius: 0px;
-      border-bottom-right-radius: 0px;
-  }
-  .panel-footer {
-      background-color: white !important;
-  }
-  .panel-footer h3 {
-      font-size: 32px;
-  }
-  .panel-footer h4 {
-      color: #aaa;
-      font-size: 14px;
-  }
-  .panel-footer .btn {
-      margin: 15px 0;
-      background-color: #6666ff;
-      color: #fff;
-  }
+  
   .navbar {
       margin-bottom: 0;
       background-color: #6666ff;
@@ -172,7 +137,7 @@ body {font-family: Verdana,sans-serif;}
 /* Slideshow container */
 .slideshow-container {
   max-width: 500px;
-  
+  position: relative;
   margin: auto;
 }
 
@@ -232,4 +197,8 @@ body {font-family: Verdana,sans-serif;}
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
   .text {font-size: 11px}
+}
+.responsive-image {
+  height: auto;
+  width: 100%;
 }
