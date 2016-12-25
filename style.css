@@ -31,14 +31,7 @@ body {
   .bg-grey {
       background-color: #f6f6f6;
   }
-  .logo-small {
-      color: #6666ff;
-      font-size: 50px;
-  }
-  .logo {
-      color: #6666ff;
-      font-size: 200px;
-  }
+  
   .thumbnail {
       padding: 0 0 15px 0;
       border: none;
@@ -49,16 +42,7 @@ body {
       height: 100%;
       margin-bottom: 10px;
   }
-  .carousel-control.right, .carousel-control.left {
-      background-image: none;
-      color: #6666ff;
-  }
-  .carousel-indicators li {
-      border-color: #6666ff;
-  }
-  .carousel-indicators li.active {
-      background-color: #6666ff;
-  }
+
   .item h4 {
       font-size: 19px;
       line-height: 1.375em;
@@ -177,9 +161,75 @@ body {
         font-size: 150px;
     }
   }
-  #usability{
+  #sliderimages{
+    background-color: green;
 
   }
-  #perfectfeatures{
-    margin-bottom: 30px;
-  }
+  * {box-sizing:border-box}
+body {font-family: Verdana,sans-serif;}
+.mySlides {display:none}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 500px;
+  
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .2} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .2} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
