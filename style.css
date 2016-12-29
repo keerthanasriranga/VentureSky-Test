@@ -25,7 +25,7 @@ body {
       color: #fff;
       padding: 100px 25px;
       font-family: Montserrat, sans-serif;
-      min-height: 350px;
+      height: auto;
   }
   .container-fluid {
       padding: 60px 50px;
@@ -201,4 +201,10 @@ body {font-family: Verdana,sans-serif;}
 .responsive-image {
   height: auto;
   width: 100%;
+}
+#download{
+  height: auto;
+}
+#realfooter{
+  height: auto;
 }
